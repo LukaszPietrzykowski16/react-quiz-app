@@ -24,19 +24,23 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <>
       <div className={game === true ? 'game-on' : 'game-off'}>
-      {questions[result].question}
-      <br></br>
-      <button onClick={(e) => nextQuestion(1)}> {questions[result].answer1} </button>
-      <button onClick={(e) => nextQuestion(2)}> {questions[result].answer2} </button>
-      <button onClick={(e) => nextQuestion(3)}> {questions[result].answer3} </button>
-      <button onClick={(e) => nextQuestion(4)}> {questions[result].answer4} </button>
+        <div className='question'>
+          <h1>{questions[result].question}</h1>
+        </div>
+        <div className='answer'>
+        <button className='button-pad' onClick={(e) => nextQuestion(1)}> {questions[result].answer1} </button>
+        <button className='button-pad' onClick={(e) => nextQuestion(2)}> {questions[result].answer2} </button>
+        <button className='button-pad' onClick={(e) => nextQuestion(3)}> {questions[result].answer3} </button>
+        <button className='button-pad' onClick={(e) => nextQuestion(4)}> {questions[result].answer4} </button>
+        </div>
+  
       </div>
       <div className={game === false ? 'result-on' : 'result-off'}>
-        Your score: {end}
+        Your score: {end -1}
       </div>
-    </div>
+      </>
   );
 }
 

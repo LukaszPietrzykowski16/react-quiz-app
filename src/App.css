@@ -1,10 +1,55 @@
-.App {
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+body {
+  background-color: aliceblue;
+}
+
+button {
+  background-color: #e2e7e2; /* Green */
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 15px 32px;
   text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+.button-pad {
+  margin: 20px;
 }
 
 .game-on {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  width: 50vw;
+  background-color: rgb(76, 76, 251);
+  border-radius: 10px;
 }
+
+.answer {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 .game-off {
   display: none;
@@ -12,6 +57,8 @@
 
 .result-on {
   display: block;
+  font-size: 40px;
+  color: rgb(76, 76, 251);
 }
 
 .result-off {
