@@ -1,23 +1,21 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import questions from './questions.js'
+
+
 
 function App() {
+
+  const [result, setResult] = useState(0);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {questions[result].question}
+      <br></br>
+      <button onClick={() => setResult(result + 1)}> {questions[result].answer1} </button>
+      <button onClick={() => setResult(result + 1)}> {questions[result].answer2} </button>
+      <button onClick={() => setResult(result + 1)}> {questions[result].answer3} </button>
+      <button onClick={() => setResult(result + 1)}> {questions[result].answer4} </button>
     </div>
   );
 }
