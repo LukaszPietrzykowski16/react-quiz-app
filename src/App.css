@@ -1,3 +1,19 @@
 .App {
   text-align: center;
 }
+
+.game-on {
+  display: block;
+}
+
+.game-off {
+  display: none;
+}
+
+.result-on {
+  display: block;
+}
+
+.result-off {
+  display: none;
+}
