@@ -6,9 +6,18 @@ import questions from './questions.js'
 
 function App() {
 
+  // backend and frontend communication 
+  React.useEffect(() => {
+
+    fetch("/api")
+      .then((res) => res.json())
+      .then(console.log('test'))
+  }, [])
+
   const [game, setGame] = useState(true); 
   const [result, setResult] = useState(0);
   const [end, setEnd] = useState(1);
+
 
   function nextQuestion(e){
     if (questions[result].answer1[e] === true) {
