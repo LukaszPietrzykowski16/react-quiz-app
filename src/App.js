@@ -7,13 +7,14 @@ import questions from './questions.js'
 function App() {
 
   // backend and frontend communication 
+  /*
   React.useEffect(() => {
 
-    fetch("/api")
+    fetch("http://localhost:3000/api")
       .then((res) => res.json())
-      .then(console.log('test'))
+      .then(data => console.log(data))
   }, [])
-
+*/
   const [game, setGame] = useState(true); 
   const [result, setResult] = useState(0);
   const [end, setEnd] = useState(1);
